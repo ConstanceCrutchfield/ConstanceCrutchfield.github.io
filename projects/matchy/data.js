@@ -24,10 +24,10 @@ var noises = [];
 noises[0] = "Hey Boo Boo!";
 noises.push("a pic-a-nic basket!");
 noises.unshift("Smarter than the av-er-age bear!");
-noises[noises.length -1] = "I'm Yogi!";
+noises[noises.length] = "I'm Yogi!";
 
 console.log(noises.length);
-console.log(noises.length -1);
+console.log(noises[noises.length -1]);
 console.log(noises);
 
 //////////////////////////////////////////////////////////////////////
@@ -96,18 +96,20 @@ animals.push(bunny, monkey);
 //////////////////////////////////////////////////////////////////////
 
 //an array is pretty much a list of elements
-var friends = ["Jerome"];
+var friends = [];
 
 
 function getRandomAnimal(animals) {
-   
-    return (animals[Math.floor(Math.random() * (animals.length -1))]);
+    return (animals[Math.floor(Math.random() * (animals.length))]);
 }
-
 console.log(getRandomAnimal(animals));
 
-bunny.friends = friends[0];
-console.log(friends);
+var newFriend = getRandomAnimal(animals);
+friends.push(newFriend.name);
+
+
+bunny.friends = friends;
+console.log(bunny.friends);
 
 
 /** 

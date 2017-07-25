@@ -13,31 +13,50 @@
 // Step 1 - Search ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
 function search(animals, name) {
-    if () {
-        return 
-    };
-    
-    else {
-    return null
-    };
+    for (var i = 0; i < animals.length; i++) {
+        if (animals[i].name === (name)) {
+            return animals[i];
+        }
+    }
+    return null;
 }
-
 //////////////////////////////////////////////////////////////////////
 // Step 2 - Replace //////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
+function replace(animals, name, replacement) {
+    for (var i = 0; i < animals.length; i++) {
+        if (animals[i].name === (name)) {
+        animals.splice( i, 1, replacement );
+        }
+    }
+    return animals;
+}
 
 
 //////////////////////////////////////////////////////////////////////
 // Step 3 - Remove ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
+function remove(animals, name) {
+    for (var i = 0; i < animals.length; i++) {
+        if (animals[i].name === (name)) {
+            animals.splice(i, 1);
+        }
+    }
+    return animals;
+}
 
 
 //////////////////////////////////////////////////////////////////////
 // Step 4 - Create ///////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////
-
+function add(animals, animal) {
+    for (var i = 0; i < animals.length; i++) {
+        console.log(animals[i], 'this is animals i');
+        if ((animal.name.length > 0) && (animal.species.length > 0) && (animal.name !== animals[i].name)) {
+        }
+    } 
+    animals.push(animal);
+}
 
 
 /** 
