@@ -1,8 +1,9 @@
 //global Objectvalues//
 var data = {a: "one", b: "two", ponies: "crayons", dingle: "dangle"};
-function objectValues(x) {
-  
-  return console.log(Object.values(x));
+var valuesArr = [];
+
+function objectValues(object) {
+  return (Object.values(object));
 }
 
 objectValues(data);
@@ -23,20 +24,21 @@ console.log(keysToString(data));
 var data = {a: "one", boolean: false, b: "two", 
               ponies: "crayons", something: {}, dingle: "dangle"};
 
-function valuesToKeys(x) {        //what should x be named?
+function valuesToString(obj) {        //what should x be named?
+  var objectValues = [];
+  for (var key in obj) {
   
-  var objectValues = Object.values(x);
-  
-  var objectValuesStrings = objectValues.filter(function(value) {
-  if (typeof value == "string")        //typeof and .filter to get string values
-    return value;
-});
+   if (typeof obj[key] === "string") { 
+                                    //typeof and .filter to get string values
+    objectValues.push(obj[key]) ;
+    }
  
-  return objectValuesStrings.join(' ');
+  }
+  return objectValues.join(' ');
 }
 
-valuesToKeys(data);
-console.log(valuesToKeys(data));
+valuesToString(data);
+console.log(valuesToString(data));
 
 //global array or Object
 
@@ -93,39 +95,38 @@ console.log(welcomeMessage(pet));         //returns "Welcome Shadow!"
  /* global  profileInfo*/
  
  function profileInfo (obj) {
-  var capName = obj.name.charAt(0).toUpperCase()+ obj.name.slice(1);
-  var capSpecies = obj.species.charAt(0).toUpperCase()+ obj.species.slice(1);
-  return capName + ' is a ' + capSpecies + '!';
+  var capName = obj.name.charAt(0).toUpperCase()+ obj.name.substr(1);
+  var capSpecies = obj.species.charAt(0).toUpperCase()+ obj.species.substr(1);
+  return capName + ' is a ' + capSpecies;
 }
 profileInfo(pet);
-console.log(profileInfo(pet));            //returns "Shadow is a Dog!"
+console.log(profileInfo(pet));            //returns "Shadow is a Dog"
 
 /* global  maybeNoises*/
 
-var duck = {
-  name: "Donald",
-  noises: ["quack", "squeek", "What's the big idea?!"]
-};
+
 
 function maybeNoises (obj) {
-  if (obj.noises) 
-    return obj.noises.join(" ", ",");       //.join(separater, charBeingReplaced)
-  else
+  if (obj.hasOwnProperty('noises') === true && obj.noises.length > 0) {
+    console.log('this ran');
+    return obj.noises.join(" ", ",");  
+    }                                //.join(separater, charBeingReplaced)
+  else {
     return "there are no noises";
-  
+  }
 }
-maybeNoises(pet);
-maybeNoises(duck);
-console.log(maybeNoises(pet));           //returns "there are no noises"
-console.log(maybeNoises(duck));           //returns "quack squeek What's the big idea?!"
+
 
 /* global  hasWord*/
-
-function hasWord(word) {
-  var data = "This is a super awesome string of words";
-  if (data.includes(word))
+var data = "This is a super awesome string of words";
+function hasWord(string, word) {
+  
+  if (string.search(word) > -1) {
     return true; 
-  else return false;
+  }
+  
+    return false;
+  
     
 }
 console.log(hasWord("super"));     //returns true
@@ -134,47 +135,63 @@ console.log(hasWord("duper"));     //returns false
 
 /* global addFriend */
 
-var guy1 = {
-    name: "John",
-    friends: ["Shake", "Bake"]
-  };
-  var guy2 = {
-    name: "Frank",
-    friends: ["Ann"]
-  };
 
 function addFriend (name, obj) {
   obj.friends.push(name);
-  return obj.friends;
+  return obj;
 
 }
 
-console.log(addFriend("John", guy2));   //returns ["Ann", "John"]
-console.log(addFriend("Ann", guy1));    //returns ["Shake", "Bake", "Ann"]
+
 
 
 /* global isFriend */
 
 function isFriend(name, obj) {
-  if (obj.friends.includes(name))
+  if (obj.hasOwnProperty('friends') && obj.friends.indexOf(name) > -1){
     return true;
-    else
-      return false;
+  }
+    else {
+      return false
+    }
 }
-console.log(isFriend("Shake", guy1));    //returns true
-console.log(isFriend("Shake", guy2));    //returns false
+
 
 
  /* global nonFriends */
+ function nonFriends (name, list) {
+   var result = [];
+   for (var i = 0; i < list.length; i++) {
+     if (!isFriend(name, list[i]) && list[i].name !== name) {
+       result.push(list[i].name);
+     }
+   }
+   return result;
+ }
  
  
+ /* global updateObject */  //and RETURN new object
+ function updateObject (object, key, value) {
+     if (object){
+         object[key] = value;
+     }
+     console.log(object);
+   return object;
+ }
  
- /* global updateObject */
  
- 
- 
- /* global removeProperties */
- 
+ /* global removeProperties */ //RETURN new object
+ function removeProperties (object, array) {
+    for (var i = 0; i < array.length; i ++) { 
+        for (var key in object){
+            if (key == array[i]){
+                delete object[key];
+            }
+        }
+        console.log(object);
+    }    
+     return object;
+ }
  
  
   /* global dedup */

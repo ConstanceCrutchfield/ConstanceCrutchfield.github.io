@@ -17,7 +17,7 @@
       outside_the_function = inside_the_function;
     }
 
-    yay();
+    yay();  //outside_the_function is redefined HERE not line 17, not redifined til function is called
 
     assert.equal(outside_the_function, "can you see me?");
   });
@@ -87,11 +87,11 @@
     }
 
     yay();
-    assert.equal(this.counter, 10);
+    assert.equal(this.counter, undefined);
     yay();
-    assert.equal(this.counter, 10);
+    assert.equal(this.counter, undefined);
     yay();
-    assert.equal(this.counter, 10);
+    assert.equal(this.counter, undefined);
   });
 
   QUnit.test("Inner scope can access outer scope", function(assert){
