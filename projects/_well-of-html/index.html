@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/custom.css" type="text/css" />
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bower_components/notes/notes.js"></script>
+    <title>A Well of HTML</title>
+    <style type="text/css">
+        .example-form {
+    /* Just to center the form on the page, use: margin: 0 auto;*/
+    margin: 20px;
+    width: 400px;
+    /* To see the outline of the form */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+}
+
+.example-form div + div {
+    margin-top: 1em;
+}
+
+.example-form label {
+    /* To make sure that all labels have the same size and are properly aligned */
+    display: inline-block;
+    width: 90px;
+}
+
+.example-form input,
+.example-form textarea {
+    /* To make sure that all text fields have the same font settings
+    By default, textareas have a monospace font */
+    font: 1em sans-serif;
+    /* To give the same size to all text field */
+    width: 300px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /* To harmonize the look & feel of text field border */
+    border: 1px solid #999;
+}
+
+.example-form input:focus,
+.example-form textarea:focus {
+    /* To give a little highlight on active elements */
+    border-color: #000;
+}
+
+.example-form textarea {
+    /* To properly align multiline text fields with their labels */
+    vertical-align: top;
+    /* To give enough room to type some text */
+    height: 5em;
+    /* To allow users to resize any textarea vertically
+    It does not work on every browsers */
+    resize: vertical;
+}
+table {
+    margin: 20px;
+}
+
+table,
+th,
+td {
+    padding: 4px;
+    border: 1px solid black;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 4px;
+}
+.example-grid {
+    margin: 20px;
+}
+
+.row-img {
+    height:100px;
+    width:100;
+    margin: 4px;
+}
+    </style>
+</head>
+
+<body>
+    <div id="container" class="container">
+        <!-- ALL YOUR MARKUP GOES BELOW HERE -->
+        <a href='https://www.ebay.com/'>EBAY!!!</a>
+        
+        <img src='img/cherries.jpg'/>
+        
+        <h1>h1 Heading <small>...and small bootstrap</small></h1>
+        
+        <form class='example-form' action='' method=''>
+            <div>
+                <label for='name'>Name:</label>
+                <input type='text' id='name' name='user_name'>
+            </div>
+            <div>
+                <label for='mail'>Email:</label>
+                <input type='text' id='mail' name='user_mail'>
+            </div>
+            <div>
+                <label for='msg'>Message</label>
+                <textarea id='msg' name='user_message'></textarea>
+            </div>
+            <div class='button'>
+                <button type='submit'>Send your message</button>
+            </div>
+        </form>
+        
+        <h2>h2 Heading</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                </tr>
+            </thead>
+            <tfoot>
+               <tr>
+                   <td>Names</td>
+                   <td>random</td>
+               </tr> 
+            </tfoot>
+            <tbody>
+               <tr>
+                  <td>Jim</td>
+                  <td>Jones</td>
+               </tr>
+               <tr>
+                   <td>Bobby</td>
+                   <td>Flay</td>
+               </tr>
+            </tbody>
+        </table>
+        
+        <h3>h3 Heading</h3>
+            
+            <p><b>Buy stuff!</b></p>
+            
+            <p>Or <em>sell</em> stuff. <i>Everybody</i> is doing it.</p>
+        
+        <div class='flex-row'>
+            <div>One</div>
+            <div>Two</div>
+            <div>Three</div>
+            <div>Four</div>
+        </div>
+        
+        <h4>h4 Heading</h4>
+            
+            <ul>
+                <li>Eeny</li>
+                <li>Meeny</li>
+                <li>Miney</li>
+                <li>Moe</li>
+            </ul>
+            
+            <ol>
+                <li>veni</li>
+                <li>vidi</li>
+                <li>vici</li>
+            </ol>
+        
+        <h5>h5 Heading</h5>
+        
+        <dl>
+            <dt>Icecream</dt>
+            <dd>magical food</dd>
+            
+            <dt>Orange</dt>
+            <dd>color of oranges</dd>
+        </dl>
+        
+        <h6>h6 Heading</h6>
+        
+        <div>
+            <p>Here's a <strong>div</strong> for some stuff...</p>
+        </div>
+        
+        <div>
+            <img src='https://shechive.files.wordpress.com/2010/07/ice-cream-30.jpg?quality=100&strip=info&w=500'/>
+        </div>
+        
+        <div>
+            <a href='https://www.baskinrobbins.com/content/baskinrobbins/en.html'>Baskin Robbins!!</a>
+        </div>
+        
+        <div>
+            <p>Another paragraph</p>
+        </div>
+        
+        <div>
+            <p>Running out of stuff to say</p>
+        </div>
+        
+        <div class="example-grid">
+            <div class="row">
+                <div class="col-md-2"><img src="http://www.finestpitbullsmade.com/wp-content/uploads/2015/11/white-pitbull-with-blue-eyes.jpg" class="row-img"/>
+                </div>
+                
+                <div class="col-md-10">White bully pup!</div>
+            </div>
+                
+            <div class="row">
+                <div class="col-md-2"><img src="https://i.pinimg.com/736x/56/b7/1a/56b71a6bdf6e96886b6cf1cfe6d56d40--pit-puppies-cute-pitbulls-puppies.jpg" class="row-img"/>
+                </div>
+                
+                <div class="col-md-10">This one is brown!</div>
+            </div>
+                
+            <div class="row">
+                <div class="col-md-2"><img src="https://s-media-cache-ak0.pinimg.com/736x/00/5f/c8/005fc8eb141fc46497db5ad27a7cea6e--blue-pitbull-puppies-pit-bull-puppies.jpg" class="row-img"/>
+                </div>
+                
+                <div class="col-md-10">Grey puppy!</div>
+            </div>
+        </div>
+        
+        
+        
+        <!-- ALL YOUR MARKUP GOES ABOVE HERE -->
+    </div>
+    <script>
+        $(function () {
+            window.opspark.notes.show();
+        });
+    </script>
+</body>
+
+</html>
