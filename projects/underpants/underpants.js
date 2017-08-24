@@ -282,18 +282,12 @@ _.unique = function (array) {
 */
 _.map = function (collection, func) {
     var newArray = [];
-    if (Array.isArray(collection)) {
-        for (var i = 0; i < collection.length; i++) {
-            newArray.push(func(collection[i], i, collection));
-        }
-    } else {
-        for (var key in collection) {
-            newArray.push(func(collection[key], key, collection));
-        }
-    }
+    _.each(collection, function(element, index, collection) {
+        newArray.push(func(element, index, collection));
+    });
     return newArray;
 };
-
+    
 /** _.pluck()
 * Arguments:
 *   1) An array of objects
@@ -355,15 +349,27 @@ _.contains = function (array, value) {
 *   _.every([2,4,6], function(e){return e % 2 === 0}) -> true
 *   _.every([1,2,3], function(e){return e % 2 === 0}) -> false
 */
-_.every = function (collection, func) {
-    var passed = [];
+
+//check if array or obj
+//loop over collection
+//call function for every element
+//return true if function returns true for every element
+//return false if even one element returns false
+
+_.every = function (collection, func) { //maybe not use each??
+    var passed = true;
     _.each(collection, function(element, index, collection) {
-        if (func(element, index, collection)) {
-            passed.push(element);
+        if(func === undefined) {
+            func = function(element, index, collection) {
+                return !!element;
+            };
+        }
+        if (!func(element, index, collection)) {
+            passed = false;
         }
         
     });
-    return (passed === collection) ? true : false;
+    return passed;
 };
 
 /** _.some()
@@ -386,8 +392,27 @@ _.every = function (collection, func) {
 *   _.some([1,3,5], function(e){return e % 2 === 0}) -> false
 *   _.some([1,2,3], function(e){return e % 2 === 0}) -> true
 */
+
+//check if collection is array or object
+//call function for every element
+//return true if ANY elemrnt returns true when passed thru function
+//return false if ALL elements return false when passed thru function
+//if no function given, return true if ANY element is truthy, else return false
+
 _.some = function (collection, func) {
-    
+    var failed = false;
+    _.each(collection, function(element, index, collection) {
+        if(func === undefined) {
+            func = function(element, index, collection) {
+                return !!element;
+            };
+        }
+        if (func(element, index, collection)) {
+            failed = true;
+        }
+        
+    });
+    return failed;
 };
 
 /** _.reduce()
@@ -408,6 +433,28 @@ _.some = function (collection, func) {
 * Examples:
 *   _.reduce([1,2,3], function(previousSum, currentValue, currentIndex){ return previousSum + currentValue }, 0) -> 6
 */
+//start with if else
+//seed is the accumulator
+//store the value of each function call
+//loop thru array
+//define function with parameters (previous result, element, index)
+//use 'seed' as value of 'previous result' for first iteration
+//if no seed, use value of collection[0] as 'seed'
+//call function for each element
+//return seed 
+//use return statement as value of 'previous result'
+//after last iteration, return the value of final function call
+_.reduce = function (array, func, seed ) {
+    let combined = seed, i = 0;
+    if(combined === undefined) {
+        combined = array[0];
+        i = 1;
+    }
+    for (; i < array.length; i++) {
+    combined = func(combined, array[i], i, array);
+    }
+    return combined;
+};
 
 
 /** _.extend()
@@ -424,7 +471,20 @@ _.some = function (collection, func) {
 *   _.extend(data, {b:"two"}); -> data now equals {a:"one",b:"two"}
 *   _.extend(data, {a:"two"}); -> data now equals {a:"two"}
 */
+//loop over object properties
+//copy each property of each object to first object 
+//return object one
 
+
+_.extend = function (obj1) {
+  var args = Array.from(arguments);
+  _.each(arguments, function (element, i, array) {
+    for (var key in element) {
+        obj1[key] = element[key];
+    }
+  });
+    return obj1;
+};
 
 // This is the proper way to end a javascript library
 }());
