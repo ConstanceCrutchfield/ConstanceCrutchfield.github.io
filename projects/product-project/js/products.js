@@ -127,9 +127,10 @@ var dropdownTypes = function(){
    console.log(types);
    
    types.forEach(function(element, index, array) {
+        $('<option>').text('all').appendTo($dropDown);
        $('<option>').text(element).appendTo($dropDown);
    });
-    $('<option>').text('all').appendTo($dropDown);
+   
     
 };
 

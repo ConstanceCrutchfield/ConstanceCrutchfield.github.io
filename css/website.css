@@ -1,0 +1,123 @@
+.container-fluid{
+  width: 90%;
+  max-width: 1400px;
+}
+.nav-pills {
+  font-size: 2em;
+  margin-bottom: 10%;
+  background-color:#423f4a;
+}
+a {
+  color:white;
+}
+body {
+  background-color: grey;
+  font-family: Berkshire Swash, Times;
+  color:white;
+}
+
+h1{
+  font-size:5vw;
+}
+h3{
+  margin-top:0;
+  padding-bottom:10px;
+}
+p {
+  font-size: 1.7em;
+  padding-top: 5%;
+}
+.meHeader{
+  margin-left:5%;
+}
+.meText {
+  margin-left: 10%;
+  width: 90%;
+  height: 55%;
+  overflow: scroll;
+}
+::-webkit-scrollbar {
+  display:none;
+}
+.p3-container {
+  width: 90%;
+  margin: auto;
+}
+
+.btn-default{
+  margin-top:20px;
+  background-color:rgba(108, 108, 111, .7);
+  color: white;
+  font-size: 1.4em;
+}
+.frame{
+  background-color:rgba(108, 108, 111, .7);
+  width: 60%;
+  margin-right:auto;
+  margin-left: auto;
+  border-radius: 8px;
+}
+hr {
+  width:90%;
+}
+h2 {
+  color:grey;
+  text-shadow: 2px 2px white;
+}
+.pageOne{
+  background: url("https://images.unsplash.com/photo-1468070454955-c5b6932bd08d?auto=format&fit=crop&w=500&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+  background-size:cover;
+  height:650px;
+}
+#pageTwo {
+  background:url("https://images.unsplash.com/photo-1496674205429-924b32acd421?auto=format&fit=crop&w=750&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+  background-size:cover;
+  height: 650px;
+}
+
+.me img{
+  display:block;
+  margin: 0 auto;
+  margin-top:20%;
+  border-radius:25px;
+  width: 70%;
+  height: 45%;
+}
+
+#pageThree {
+ background:url("https://images.unsplash.com/photo-1510520555468-ffab137027f5?auto=format&fit=crop&w=750&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+  background-size:cover;
+  height: 650px;
+  margin-top: -5%;
+}
+.p3header {
+  padding-top:15px;
+}
+#pageFour {    background:url("https://images.unsplash.com/photo-1510548470459-83d740bff5de?auto=format&fit=crop&w=751&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
+  background-size:cover;
+  height: 600px;
+  color:black;
+  font-size:1.5em;
+}
+
+#contactHeader{
+  font-size: 2.5em;
+  color: rgb(23, 67, 18);
+  padding-top: 150px;
+  text-shadow: 4px 4px 4px white;
+}
+.footer{
+  background-color:black;
+  margin-top: 5%;
+}
+#email{
+  padding-top: 17%;
+}
+#email a{
+  color:black;
+  font-size:1.5em;
+} 
+#fb_btn{
+  font-size:1.0em;
+  margin-left: 20%;
+}
