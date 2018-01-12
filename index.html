@@ -9,131 +9,231 @@
 <html>
     <head>
         <title>ConstanceCrutchfield.io</title>
-        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap-grid.css" />-->
-        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />-->
-        <!--<link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">-->
-        <!--<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">-->
-        <!--<link rel="stylesheet" href="website.css" />-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap-grid.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/website.css" />
         <style>
-            body {
-                background: rgb(251, 248, 149);
-                color: rgb(42, 35, 101);
-                padding: 10px;
-                font-family: arial;
-                border-radius: 0px 75px 0px 75px;
-                border: 30px groove #1880b8;
-            }
-            header {
-                font-size: 1.5em;
-                font-weight: bold;
-            }
-            [id=all-contents] {
-                max-width: 800px;
-                margin: auto;
-            }
+            /*body {*/
+            /*    background: rgb(251, 248, 149);*/
+            /*    color: rgb(42, 35, 101);*/
+            /*    padding: 10px;*/
+            /*    font-family: arial;*/
+            /*    border-radius: 0px 75px 0px 75px;*/
+            /*    border: 30px groove #1880b8;*/
+            /*}*/
+            /*header {*/
+            /*    font-size: 1.5em;*/
+            /*    font-weight: bold;*/
+            /*}*/
+            /*[id=all-contents] {*/
+            /*    max-width: 800px;*/
+            /*    margin: auto;*/
+            /*}*/
     
             /* navigation menu */
-            nav {
-                background: rgb(42, 35, 101);
-                margin: 0 auto;
-                margin-bottom: 20px;
-                display: flex;
-                padding: 10px;
-            }
-            nav header {
-                display: flex;
-                align-items: center;
-                color: rgb(255, 255, 255);
-                flex: 1;
-            }
-            nav ul {
-                list-style-image: none;
-            }
-            nav li {
-                display: inline-block;
-                padding: 0 10px;
-            }
-            nav a {
-                text-decoration: none;
-                color: #fff;
-            }
+            /*nav {*/
+            /*    background: rgb(42, 35, 101);*/
+            /*    margin: 0 auto;*/
+            /*    margin-bottom: 20px;*/
+            /*    display: flex;*/
+            /*    padding: 10px;*/
+            /*}*/
+            /*nav header {*/
+            /*    display: flex;*/
+            /*    align-items: center;*/
+            /*    color: rgb(255, 255, 255);*/
+            /*    flex: 1;*/
+            /*}*/
+            /*nav ul {*/
+            /*    list-style-image: none;*/
+            /*}*/
+            /*nav li {*/
+            /*    display: inline-block;*/
+            /*    padding: 0 10px;*/
+            /*}*/
+            /*nav a {*/
+            /*    text-decoration: none;*/
+            /*    color: #fff;*/
+            /*}*/
     
             /* main container area beneath menu */
-            main {
-                background: rgb(254, 254, 254);
-                display: flex;
-            }
-            [class=sidebar] {
-                margin-right: 25px;
-                padding: 10px;
-            }
-            [class=sidebar] img {
-                width: 200px;
-            }
-            [class=content] {
-                flex: 1;
-                padding: 15px;
-            }
-            [class=interests] header {
-                font-size: 1.25em;
-            }
+            /*main {*/
+            /*    background: rgb(254, 254, 254);*/
+            /*    display: flex;*/
+            /*}*/
+            /*[class=sidebar] {*/
+            /*    margin-right: 25px;*/
+            /*    padding: 10px;*/
+            /*}*/
+            /*[class=sidebar] img {*/
+            /*    width: 200px;*/
+            /*}*/
+            /*[class=content] {*/
+            /*    flex: 1;*/
+            /*    padding: 15px;*/
+            /*}*/
+            /*[class=interests] header {*/
+            /*    font-size: 1.25em;*/
+            /*}*/
         </style>
     </head>
     
     <body>
         <div id="all-contents">
             <div id="hamburger-nav"></div>
-            <div id="vCard">
-                <div id="contact-container"> 
-                    <div id="logo-container"></div>
-                    <div id="contact-box">
-                        <h4></h4>
-                        <p></p>
-                        <h4></h4>
-                        <p></p>
-                        <h4></h4>
-                        <p></p>
-                        <div id="icons"></div>
-                    </div>
-                    
-                </div>
-                <div id="info-container">
-                    <div id="profile">
-                        <h1></h1>
-                        <h5></h5>
-                        <p></p>
-                    </div>
-                </div>
-                <div id="vCard-image-container">
-                    <img>
-                </div>
-                
-            </div>
-            <nav>
-                <header>Constance's Website!</header>
-                <ul>
-                    <li><a href ="index.html">Home</a></li>
-                    <li><a href ="portfolio.html">Portfolio</a></li>
-                    <li><a href="studies.html">Studies</a></li>
-                </ul>
-            </nav>
+            
+            <!--<nav>-->
+            <!--    <header>Constance G. Crutchfield</header>-->
+            <!--    <ul>-->
+            <!--        <li><a href ="index.html">Home</a></li>-->
+            <!--        <li><a href ="portfolio.html">Portfolio</a></li>-->
+            <!--        <li><a href="studies.html">Studies</a></li>-->
+            <!--    </ul>-->
+            <!--</nav>-->
             
             <main>
-                <div class="sidebar">
-                    <img src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/24899939_10156887800262519_630259148447560693_n.jpg?oh=990efb6de4d8dca2285f2dbc63ac6177&oe=5AC646E5"></img>
-                </div>
                 
-                <div class="content">
-                    <header>Constance Crutchfield</header>
-                    <p>Pastry Chef, Custom Cake Artisan, Bunny Wabbit</p>
-                    <section class="interests">
-                        <header>Interests</header>
-                        <ul>
-                            <li>Puppies</li>
-                            <li>Bright Colors</li>
-                            <li>Big hair</li>
-                        </ul>
-                    </section>
+                <div class="container-fluid">
+            <!--        <div id="vCard">-->
+            <!--    <div id="contact-container"> -->
+            <!--        <div id="logo-container"></div>-->
+            <!--        <div id="contact-box">-->
+            <!--            <h4></h4>-->
+            <!--            <p></p>-->
+            <!--            <h4></h4>-->
+            <!--            <p></p>-->
+            <!--            <h4></h4>-->
+            <!--            <p></p>-->
+            <!--            <div id="icons"></div>-->
+            <!--        </div>-->
+                    
+            <!--    </div>-->
+            <!--    <div id="info-container">-->
+            <!--        <div id="profile">-->
+            <!--            <h1>Constance G. Crutchfield</h1>-->
+            <!--            <h5>Software Engineer</h5>-->
+            <!--            <p></p>-->
+            <!--        </div>-->
+            <!--    </div>-->
+            <!--    <div id="vCard-image-container">-->
+            <!--        <img>-->
+            <!--    </div>-->
+            <!--</div>-->
+              <div class="pageOne text-center">
+                  <ul class="nav nav-pills">
+                    <li>
+                      <a href="#">Constance Crutchfield</a>
+                    </li>
+                    <li class="pull-right">
+                      <a href="#pageFour">Contact me</a>
+                    </li>
+                    <li class="pull-right">
+                      <a href="#pageTwo">About me</a>
+                    </li>
+                    <li class="pull-right">
+                      <a href="#pageThree">Portfolio</a>
+                    </li>
+                  </ul>
+                  
+                    <div class="frame">
+                     <h1>ConstanceCrutchfield</h1>
+                      <hr>
+                    <h3>~ "Worry is a misuse of imagination" ~</h3>
+                    </div>
+                    
+                    <div class="btnlist">
+                      <a class="btn btn-default" href="https://www.facebook.com/constance.g.crutchfield" target="blank"><i class="fa fa-facebook" aria-hidden="true"></i>
+                 Facebook</a>
+                      <a class="btn btn-default" href="https://www.linkedin.com/in/constance-crutchfield/" target="blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                 LinkedIn</a>
+                      <a class="btn btn-default" href="https://codepen.io/ConstanceCru/" target="blank"><i class="fa fa-codepen" aria-hidden="true"></i>
+                        CodePen</a>
+                      <a class="btn btn-default" href="https://github.com/ConstanceCrutchfield" target="blank"><i class="fa fa-github" aria-hidden="true"></i>
+                 GitHub</a>
+                      <a class="btn btn-default" href="https://www.freecodecamp.org/constancecrutchfield" target="blank"><i class="fa fa-free-code-camp" aria-hidden="true"></i>
+                 FreeCodeCamp</a>
+                      <!--<a class="btn btn-default" href="#"><i class="fa fa-cloud" aria-hidden="true"></i>
+                 Cloud9</a>-->
+                    </div>
+                  </div>
+                  <div id="pageTwo">
+                    <div class="row">
+                      <div class="col-md-6 text-center">
+                        <h1 class="meHeader">ConstanceCrutchfield</h1> 
+                        <div class="meText">
+                        <p>
+                          **Lyrics to 'Clothes Off!' by Gym Class Heroes**
+                          (Info about me coming soon!)
+                          <br>
+                          Excuse me miss
+                I couldn't help but to notice how alone you are
+                I dig the attitude and how you're acting like you own the bar
+                Got me flashing keys and I don't even own a car
+                Like you ain't feeling my charm, because I know you are
+                I'm trying to see how your lips feel
+                Oh I'm sorry, my name is Travie and I'm pretty much a big deal
+                Oh, you've never heard of me
+                That sounds absurd to me
+                The way you stole my attention was flat out burglary
+                What do you say let's exit stage left so me and you can
+                Possibly reconvene and play some naked peekaboo
+                Cause after all the blouse you're wearing is kinda see through
+                And it's obvious I'm heading wherever you're leading me too
+                Such an angel with a devilish angle
+                And quite the certified sweet talker
+                And you're buying every line of it girl
+                And I don't really blame you
+                If I was in your shoes I'd probably do the same too
+                        </p>
+                        </div>
+                      </div>
+                      <div class="col-md-6 me">
+                        <img src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/10931194_10202280347009076_1293420310671808453_n.jpg?oh=d1ecb83c79053c00c7d689b0a2920da4&oe=5AC453F7">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-center" id="pageThree">
+                    <div class="p3header">
+                      <h1>Portfolio Page</h1>
+                      <h2>My past projects</h2>
+                      <hr>
+                    </div>
+                    <div class="row p3-container">
+                      <div class="col-md-3">
+                        <a href="https://constancecrutchfield-github-io-constancecrutchfield.c9users.io/projects/billypedia/index.html" target="blank"><h2>Tribute(Billypedia)</h2><img class="img-responsive" src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/23472100_10156802876242519_8956399842235675298_n.jpg?oh=14a17d2f2ef865a3e691e6708a468992&oe=5A962634"></a>
+                      </div>
+                      <div class="col-md-3">
+                        <a href="https://constancecrutchfield-github-io-constancecrutchfield.c9users.io/portfolio.html" target="blank"><h2>Portfolio1</h2><img class="img-responsive" src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/23472338_10156802876217519_6742819128093997465_n.jpg?oh=5c7d3b3b3ab3530516ded2b5ee7b5b8a&oe=5A9273EF"></a>
+                      </div>
+                      <div class="col-md-3">
+                        <a href="https://constancecrutchfield-github-io-constancecrutchfield.c9users.io/projects/product-project/index.html" target="blank"><h2>Product Project</h2><img class="img-responsive" src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/23559857_10156802876267519_769577494591395189_n.jpg?oh=aa0c5fbfbf36b3ec0dd3559ea4a0b692&oe=5AAE8FDA"></a>
+                      </div>
+                      <div class="col-md-3">
+                        <a href="file:///C:/Users/Constance/Documents/immersion-2017-09-twittler/index.html" target="blank"><h2>Twittler</h2><img class="img-responsive" src="https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/23621335_10156802876262519_3329572884825496530_n.jpg?oh=af4e55b3737f433e9a5568bb76e43229&oe=5A664012"></a>
+                      </div>
+                     </div>
+                  </div>
+                  <div class="text-center" id="pageFour">
+                     <p id="contactHeader">Contact me via email, or Facebook messenger!</p>
+                    <div class="row" id="email">
+                      <div class="col-md-6">
+                        <h2><a href="mailto:cgcrutch18@gmail.com">cgcrutch18@gmail.com</a></h2>
+                      </div>
+                      <div class="col=md=6">
+                        <a id="fb_btn" class="btn btn-default" href="https://www.facebook.com/constance.g.crutchfield" target="blank"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i> Facebook.com/Constance</a>
+                      </div>
+                    </div>
+                    <div class="footer">
+                      <h3>
+                        <a href="#">Constance Crutchfield -</a>
+                        <a href="#pageThree">Portfolio -</a>
+                        <a href="#pageTwo">About -</a>
+                        <a href="#pageFour">Contact info</a>
+                      </h3>
+                    </div>
+                  </div>
                 </div>
             </main>
         </div>

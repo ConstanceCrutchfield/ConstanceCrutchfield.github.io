@@ -1,38 +1,3 @@
-#contact-container {
-  width: 35%;
-  height: 100%;
-  position: absolute;
-  background-color: #66cdaa;
-}
-#info-container {
-  float: right;
-  width: 65%;
-  height: 100%;
-  position: absolute;
-  background-color: #f0fff0;
-}
-#profile {
-  
-} 
-#contact-box {
-  bottom: 60px;
-  position: absolute;
-  padding: 55px;
-}
-h4 #contact-box {
-  font-size:1.5vmin;
-  margin: 1vmin 0;
-}
-p #contact-box {
-  font-size:1.2vmin;
-  margin: .2vmin 0 1.5vmin;
-}
-#logo-container {
-  background-color: white;
-  height: 6vh;
-  width:10vh;
-}
-
 
 .container-fluid{
   width: 90%;
@@ -100,6 +65,46 @@ h2 {
   color:grey;
   text-shadow: 2px 2px white;
 }
+#vCard {
+  height: 100%;
+  width: 100%;
+}
+
+#contact-container {
+  width: 35%;
+  height: 100%;
+  position: absolute;
+  background-color: #66cdaa;
+}
+#info-container {
+  float: right;
+  width: 65%;
+  height: 100%;
+  position: absolute;
+  background-color: #f0fff0;
+}
+#profile {
+  
+} 
+#contact-box {
+  bottom: 60px;
+  position: absolute;
+  padding: 55px;
+}
+h4 #contact-box {
+  font-size:1.5vmin;
+  margin: 1vmin 0;
+}
+p #contact-box {
+  font-size:1.2vmin;
+  margin: .2vmin 0 1.5vmin;
+}
+#logo-container {
+  background-color: white;
+  height: 6vh;
+  width:10vh;
+}
+
 .pageOne{
   background: url("https://images.unsplash.com/photo-1468070454955-c5b6932bd08d?auto=format&fit=crop&w=500&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D");
   background-size:cover;
